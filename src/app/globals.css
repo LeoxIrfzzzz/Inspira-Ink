@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  --ink-primary: #060b19;
-  --ink-secondary: #0c1836;
-  --ink-tertiary: #19316b;
-  --ink-light: #87ceeb;
-  --ink-text: #e0f2fe;
-  --ink-text-muted: #bae6fd;
-  --ink-highlight: #0ea5e9;
+  --ink-primary: #f8f9fa; /* Off-white paper background */
+  --ink-secondary: #ffffff; /* White cards */
+  --ink-tertiary: #e9ecef; /* Clean borders */
+  --ink-light: #ced4da; /* Extremely muted accents */
+  --ink-text: #212529; /* Dark charcoal text */
+  --ink-text-muted: #6c757d; /* Gray text */
+  --ink-highlight: #000000; /* Pure black minimalist */
   
   --font-serif: 'Lora', serif;
   --font-sans: 'Inter', sans-serif;
@@ -32,22 +32,21 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 850px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
   width: 100%;
 }
 
 .header {
   text-align: center;
   margin-bottom: 3rem;
-  padding-top: 1rem;
 }
 
 .title {
   font-family: var(--font-serif);
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--ink-highlight);
   margin-bottom: 0.5rem;
   display: flex;
@@ -57,9 +56,10 @@ body {
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--ink-text-muted);
   font-weight: 300;
+  letter-spacing: 0.5px;
 }
 
 .search-form {
@@ -67,9 +67,13 @@ body {
   align-items: center;
   background-color: var(--ink-secondary);
   border: 1px solid var(--ink-tertiary);
-  border-radius: 50px;
+  border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: var(--transition);
+}
+
+.search-form:focus-within {
+  border-color: var(--ink-text-muted);
 }
 
 .search-input {
@@ -78,20 +82,20 @@ body {
   color: var(--ink-text);
   padding: 0.5rem 1rem;
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   outline: none;
-  width: 150px;
+  width: 140px;
   transition: var(--transition);
 }
 
 .search-input:focus {
-  width: 180px;
+  width: 170px;
 }
 
 .search-btn {
   background-color: transparent;
   border: none;
-  color: var(--ink-light);
+  color: var(--ink-text-muted);
   padding: 0.5rem 1rem;
   cursor: pointer;
   display: flex;
@@ -102,26 +106,25 @@ body {
 
 .search-btn:hover {
   color: var(--ink-highlight);
-  transform: scale(1.1);
 }
 
 .mood-selector {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.75rem;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .mood-btn {
-  background-color: var(--ink-secondary);
-  color: var(--ink-text);
+  background-color: transparent;
+  color: var(--ink-text-muted);
   border: 1px solid var(--ink-tertiary);
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
   font-family: var(--font-sans);
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 400;
   cursor: pointer;
   transition: var(--transition);
   display: flex;
@@ -130,28 +133,26 @@ body {
 }
 
 .mood-btn:hover {
-  background-color: var(--ink-tertiary);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: var(--ink-text-muted);
+  color: var(--ink-text);
 }
 
 .mood-btn.active {
-  background-color: var(--ink-light);
-  color: var(--ink-primary);
-  border-color: var(--ink-light);
-  transform: scale(1.05);
+  background-color: var(--ink-highlight);
+  color: #ffffff;
+  border-color: var(--ink-highlight);
 }
 
 .quote-display {
-  background: linear-gradient(145deg, var(--ink-secondary), #131a30);
+  background: var(--ink-secondary);
   border: 1px solid var(--ink-tertiary);
-  border-radius: 20px;
+  border-radius: 8px;
   padding: 4rem 3rem;
   text-align: center;
   position: relative;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   margin-bottom: 4rem;
-  min-height: 300px;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,60 +161,59 @@ body {
 
 .quote-icon {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
-  color: var(--ink-tertiary);
-  opacity: 0.5;
+  top: 1.5rem;
+  left: 1.5rem;
+  color: var(--ink-light);
 }
 
 .quote-number.badge {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
-  background-color: rgba(91, 192, 190, 0.1);
-  color: var(--ink-light);
-  border: 1px solid var(--ink-light);
-  padding: 0.25rem 0.75rem;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: transparent;
+  color: var(--ink-text-muted);
+  border: 1px solid var(--ink-tertiary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: var(--font-sans);
 }
 
 .quote-text {
   font-family: var(--font-serif);
-  font-size: 2.2rem;
-  line-height: 1.4;
+  font-size: 2rem;
+  line-height: 1.5;
   margin-bottom: 2rem;
-  font-style: italic;
-  font-weight: 500;
+  font-weight: 400;
+  color: var(--ink-highlight);
 }
 
 .quote-author {
-  font-size: 1.2rem;
-  color: var(--ink-light);
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-.quote-author::before {
-  content: "— ";
+  font-size: 1rem;
+  color: var(--ink-text-muted);
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .submission-section {
   background-color: var(--ink-secondary);
-  border-radius: 20px;
+  border-radius: 8px;
   padding: 3rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  margin-bottom: 4rem;
+  border: 1px solid var(--ink-tertiary);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  margin-bottom: 2rem;
 }
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: left;
   color: var(--ink-highlight);
+  font-weight: 500;
+  border-bottom: 1px solid var(--ink-tertiary);
+  padding-bottom: 1rem;
 }
 
 .form-group {
@@ -224,18 +224,18 @@ body {
   display: block;
   margin-bottom: 0.5rem;
   color: var(--ink-text-muted);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .form-input, .form-textarea, .form-select {
   width: 100%;
-  background-color: var(--ink-primary);
+  background-color: transparent;
   border: 1px solid var(--ink-tertiary);
   color: var(--ink-text);
-  padding: 1rem;
-  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
   font-family: var(--font-sans);
   font-size: 1rem;
   transition: var(--transition);
@@ -243,65 +243,62 @@ body {
 
 .form-input:focus, .form-textarea:focus, .form-select:focus {
   outline: none;
-  border-color: var(--ink-light);
-  box-shadow: 0 0 0 2px rgba(91, 192, 190, 0.2);
+  border-color: var(--ink-highlight);
 }
 
 .form-textarea {
-  min-height: 120px;
+  min-height: 100px;
   resize: vertical;
   font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .submit-btn {
-  background-color: var(--ink-light);
-  color: var(--ink-primary);
+  background-color: var(--ink-highlight);
+  color: #ffffff;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
   font-family: var(--font-sans);
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
-  width: 100%;
   transition: var(--transition);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  width: auto;
 }
 
 .submit-btn:hover {
-  background-color: var(--ink-highlight);
-  transform: translateY(-2px);
+  background-color: #333333;
+}
+
+.error-message, .success-message {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
 }
 
 .error-message {
-  background-color: rgba(255, 99, 71, 0.1);
-  color: #ff6b6b;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  border: 1px solid rgba(255, 107, 107, 0.3);
-  font-size: 0.95rem;
+  background-color: #fff5f5;
+  color: #e53e3e;
+  border: 1px solid #fed7d7;
 }
 
 .success-message {
-  background-color: rgba(91, 192, 190, 0.1);
-  color: var(--ink-light);
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  border: 1px solid rgba(91, 192, 190, 0.3);
-  font-size: 0.95rem;
+  background-color: #f0fff4;
+  color: #38a169;
+  border: 1px solid #c6f6d5;
 }
 
 .fade-in {
-  animation: fadeIn 0.5s ease-in;
+  animation: fadeIn 0.4s ease-in;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(5px); }
   to { opacity: 1; transform: translateY(0); }
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { PenTool, Quote as QuoteIcon, Send, Heart, Frown, Sparkles, Flame, Coffee, Wind, Stars, Search } from 'lucide-react';
+import { Feather, Quote as QuoteIcon, Send, Heart, Frown, Sparkles, Flame, Coffee, Wind, Stars, Search } from 'lucide-react';
 
 const MOODS = [
   { name: 'Happy', icon: Heart },
@@ -105,7 +105,7 @@ export default function InspiraInk() {
       <header className="header">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
           <h1 className="title" style={{ marginBottom: 0 }}>
-            <PenTool size={48} /> Inspira Ink
+            <Feather size={40} /> Inspira Ink
           </h1>
           
           <form onSubmit={handleSearch} className="search-form">
