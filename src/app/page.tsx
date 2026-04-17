@@ -123,7 +123,7 @@ export default function InspiraInk() {
         </div>
         
         {searchError && <div className="error-message" style={{marginBottom: '1rem', padding: '0.5rem'}}>{searchError}</div>}
-        <p className="subtitle">The World's Spot for Writers. Give us your lines.</p>
+        <p className="subtitle">The World&apos;s Spot for Writers. Give us your lines.</p>
       </header>
 
       <section>
@@ -183,7 +183,7 @@ export default function InspiraInk() {
           </div>
           
           <div className="form-group">
-            <label className="form-label">Writer's Name</label>
+            <label className="form-label">Writer&apos;s Name</label>
             <input
               type="text"
               className="form-input"
