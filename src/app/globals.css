@@ -231,7 +231,7 @@ body {
 
 .form-input, .form-textarea, .form-select {
   width: 100%;
-  background-color: transparent;
+  background-color: var(--ink-secondary);
   border: 1px solid var(--ink-tertiary);
   color: var(--ink-text);
   padding: 0.75rem 1rem;
@@ -239,6 +239,11 @@ body {
   font-family: var(--font-sans);
   font-size: 1rem;
   transition: var(--transition);
+}
+
+.form-select option {
+  background-color: #1a1f2b; /* A bit lighter for contrast in the dropdown */
+  color: #ffffff;
 }
 
 .form-input:focus, .form-textarea:focus, .form-select:focus {
