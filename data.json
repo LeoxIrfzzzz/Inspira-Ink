@@ -1,0 +1,18 @@
+{
+  "quotes": [
+    { "id": "1", "text": "The sun is a daily reminder that we too can rise.", "author": "Inspira Ink", "mood": "Happy" },
+    { "id": "2", "text": "Joy is not in things; it is in us.", "author": "Inspira Ink", "mood": "Happy" },
+    { "id": "3", "text": "Tears come from the heart and not from the brain.", "author": "Inspira Ink", "mood": "Sad" },
+    { "id": "4", "text": "Heavy hearts, like heavy clouds in the sky, are best relieved by the letting of a little water.", "author": "Inspira Ink", "mood": "Sad" },
+    { "id": "5", "text": "The only way to do great work is to love what you do.", "author": "Inspira Ink", "mood": "Inspired" },
+    { "id": "6", "text": "Whatever the mind can conceive and believe, it can achieve.", "author": "Inspira Ink", "mood": "Inspired" },
+    { "id": "7", "text": "For every minute you remain angry, you give up sixty seconds of peace of mind.", "author": "Inspira Ink", "mood": "Angry" },
+    { "id": "8", "text": "Anger is an acid that can do more harm to the vessel in which it is stored.", "author": "Inspira Ink", "mood": "Angry" },
+    { "id": "9", "text": "Peace comes from within. Do not seek it without.", "author": "Inspira Ink", "mood": "Calm" },
+    { "id": "10", "text": "Calmness is the cradle of power.", "author": "Inspira Ink", "mood": "Calm" },
+    { "id": "11", "text": "Nothing diminishes anxiety faster than action.", "author": "Inspira Ink", "mood": "Anxious" },
+    { "id": "12", "text": "Anxiety's like a rocking chair. It gives you something to do but doesn't get you anywhere.", "author": "Inspira Ink", "mood": "Anxious" },
+    { "id": "13", "text": "Love is composed of a single soul inhabiting two bodies.", "author": "Inspira Ink", "mood": "Romantic" },
+    { "id": "14", "text": "To love and be loved is to feel the sun from both sides.", "author": "Inspira Ink", "mood": "Romantic" }
+  ]
+}
