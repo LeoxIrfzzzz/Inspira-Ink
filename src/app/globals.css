@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  --ink-primary: #0a0a0a;
-  --ink-secondary: #000000;
-  --ink-tertiary: #222222;
-  --ink-light: #555555;
-  --ink-text: #ffffff;
-  --ink-text-muted: #888888;
-  --ink-highlight: #ffffff;
+  --ink-primary: #05070a;
+  --ink-secondary: #0a0d14;
+  --ink-tertiary: #1a1f2b;
+  --ink-light: #2d364a;
+  --ink-text: #f0f2f5;
+  --ink-text-muted: #718096;
+  --ink-highlight: #63b3ed;
   
   --font-serif: 'Lora', serif;
   --font-sans: 'Inter', sans-serif;
