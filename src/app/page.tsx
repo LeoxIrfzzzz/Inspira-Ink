@@ -104,9 +104,11 @@ export default function InspiraInk() {
     <main className="container">
       <header className="header">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-          <h1 className="title" style={{ marginBottom: 0 }}>
-            <Feather size={40} /> Inspira Ink
-          </h1>
+          <a href="/" className="title-link">
+            <h1 className="title" style={{ marginBottom: 0 }}>
+              <Feather size={40} /> Inspira Ink
+            </h1>
+          </a>
           
           <form onSubmit={handleSearch} className="search-form">
             <input 
