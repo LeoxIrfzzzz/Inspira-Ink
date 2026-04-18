@@ -104,13 +104,21 @@ export default function InspiraInk() {
 
   return (
     <main className="container">
-      <header className="header">
+      <header className="header" style={{ marginBottom: '3rem' }}>
         <a href="/" className="title-link">
-          <h1 className="title">
-            <Feather size={40} /> Inspira Ink
-          </h1>
+          <img 
+            src="/banner.jpg" 
+            alt="Inspira Ink - The work spot for writers" 
+            style={{ 
+              width: '100%', 
+              maxWidth: '600px', 
+              height: 'auto', 
+              borderRadius: '12px', 
+              boxShadow: '0 0 30px rgba(81, 112, 255, 0.2)',
+              border: '1px solid var(--theme-blue)'
+            }} 
+          />
         </a>
-        <p className="subtitle">The World&apos;s Spot for Writers. Give us your lines.</p>
       </header>
 
       <section className="search-section">
