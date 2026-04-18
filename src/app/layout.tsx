@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Inspira Ink - Writer's Sanctuary",
-  description: "A minimalistic space for writers to immortalize their lines.",
+  title: "Inspira Ink | Black & Blue Sanctuary",
+  description: "A minimalistic space for writers to immortalize their lines in #5170FF.",
 };
 
 export const viewport: Viewport = {
