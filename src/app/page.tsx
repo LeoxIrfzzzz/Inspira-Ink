@@ -103,30 +103,34 @@ export default function InspiraInk() {
   return (
     <main className="container">
       <header className="header">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-          <a href="/" className="title-link">
-            <h1 className="title" style={{ marginBottom: 0 }}>
-              <Feather size={40} /> Inspira Ink
-            </h1>
-          </a>
-          
-          <form onSubmit={handleSearch} className="search-form">
-            <input 
-              type="number" 
-              placeholder="Search Quote #..." 
-              className="search-input"
-              value={searchId}
-              onChange={e => setSearchId(e.target.value)}
-            />
-            <button type="submit" className="search-btn">
-              <Search size={18} />
-            </button>
-          </form>
-        </div>
-        
-        {searchError && <div className="error-message" style={{marginBottom: '1rem', padding: '0.5rem'}}>{searchError}</div>}
+        <a href="/" className="title-link">
+          <h1 className="title">
+            <Feather size={40} /> Inspira Ink
+          </h1>
+        </a>
         <p className="subtitle">The World&apos;s Spot for Writers. Give us your lines.</p>
       </header>
+
+      <section className="search-section">
+        <form onSubmit={handleSearch} className="search-form">
+          <input 
+            type="number" 
+            placeholder="Search by quote number (e.g., 42)..." 
+            className="search-input"
+            value={searchId}
+            onChange={e => setSearchId(e.target.value)}
+          />
+          <button type="submit" className="search-btn" aria-label="Search">
+            <Search size={20} />
+          </button>
+        </form>
+      </section>
+
+      {searchError && (
+        <div className="error-message" style={{ maxWidth: '400px', margin: '0 auto 2rem', textAlign: 'center' }}>
+          {searchError}
+        </div>
+      )}
 
       <section>
         <div className="mood-selector">
@@ -215,6 +219,32 @@ export default function InspiraInk() {
         </form>
       </section>
       
+      <section className="info-section">
+        <h2 className="section-title">About Inspira Ink</h2>
+        <div className="info-grid">
+          <div className="info-card">
+            <QuoteIcon size={24} style={{ marginBottom: '1rem' }} />
+            <h3>Writer&apos;s Sanctuary</h3>
+            <p>Inspira Ink is a minimalistic space dedicated to the weight of words. It is designed for those who believe that a single line can change a perspective.</p>
+          </div>
+          <div className="info-card">
+            <Sparkles size={24} style={{ marginBottom: '1rem' }} />
+            <h3>Mood-Based Curation</h3>
+            <p>Whether you feel calm, anxious, or romantic, explore thousands of curated quotes that resonate with your current emotional state.</p>
+          </div>
+          <div className="info-card">
+            <Stars size={24} style={{ marginBottom: '1rem' }} />
+            <h3>Cross-Device Sync</h3>
+            <p>Every quote you contribute is assigned a unique number. Simply search for that number on any device to retrieve your favorite lines instantly.</p>
+          </div>
+          <div className="info-card">
+            <Send size={24} style={{ marginBottom: '1rem' }} />
+            <h3>Immortalize Lines</h3>
+            <p>Contributing is easy. Write your lines, choose a mood, and hit immortalize. Your words will stay in our digital ink for others to find.</p>
+          </div>
+        </div>
+      </section>
+
       <footer style={{ textAlign: 'center', padding: '2rem 0', color: 'var(--ink-text-muted)', fontSize: '0.9rem', borderTop: '1px solid var(--ink-tertiary)', marginTop: '2rem', fontFamily: 'var(--font-sans)' }}>
         Built by the writer <strong style={{ color: 'var(--ink-text)' }}>Mohammed Irfaan Zayn</strong> with <Heart size={14} style={{ display: 'inline', color: 'var(--ink-highlight)', margin: '0 4px', position: 'relative', top: '2px' }}/> Love.
       </footer>
