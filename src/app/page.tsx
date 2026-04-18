@@ -223,24 +223,24 @@ export default function InspiraInk() {
         <h2 className="section-title">About Inspira Ink</h2>
         <div className="info-grid">
           <div className="info-card">
-            <QuoteIcon size={24} style={{ marginBottom: '1rem' }} />
-            <h3>Writer&apos;s Sanctuary</h3>
-            <p>Inspira Ink is a minimalistic space dedicated to the weight of words. It is designed for those who believe that a single line can change a perspective.</p>
+            <QuoteIcon size={24} style={{ marginBottom: '1.25rem' }} />
+            <h3>7 Emotional Realms</h3>
+            <p>Step into 7 unique feeling moods carefully curated for every emotional state: Happy, Sad, Inspired, Angry, Calm, Anxious, and Romantic.</p>
           </div>
           <div className="info-card">
-            <Sparkles size={24} style={{ marginBottom: '1rem' }} />
-            <h3>Mood-Based Curation</h3>
-            <p>Whether you feel calm, anxious, or romantic, explore thousands of curated quotes that resonate with your current emotional state.</p>
+            <Sparkles size={24} style={{ marginBottom: '1.25rem' }} />
+            <h3>14,049 Original Lines</h3>
+            <p>Our library features 2,007 original quotes for each mood (totaling 14,049 lines), all exclusively scribed by the writer <strong>Mohammed Irfaan Zayn</strong>.</p>
           </div>
           <div className="info-card">
-            <Stars size={24} style={{ marginBottom: '1rem' }} />
-            <h3>Cross-Device Sync</h3>
-            <p>Every quote you contribute is assigned a unique number. Simply search for that number on any device to retrieve your favorite lines instantly.</p>
+            <Stars size={24} style={{ marginBottom: '1.25rem' }} />
+            <h3>Permanent Inscriptions</h3>
+            <p>Every new quote you contribute is saved with a unique number and stored permanently. Your lines will never be deleted, even when the application is updated.</p>
           </div>
           <div className="info-card">
-            <Send size={24} style={{ marginBottom: '1rem' }} />
-            <h3>Immortalize Lines</h3>
-            <p>Contributing is easy. Write your lines, choose a mood, and hit immortalize. Your words will stay in our digital ink for others to find.</p>
+            <Send size={24} style={{ marginBottom: '1.25rem' }} />
+            <h3>Cross-Device Sanctuary</h3>
+            <p>Use your unique quote number to find your lines on any device, anywhere in the world. Inspira Ink is your immortal digital archive for the soul.</p>
           </div>
         </div>
       </section>
