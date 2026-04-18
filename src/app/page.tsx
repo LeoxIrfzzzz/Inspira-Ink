@@ -44,7 +44,9 @@ export default function InspiraInk() {
   };
 
   useEffect(() => {
-    fetchQuote(activeMood);
+    if (activeMood) {
+      fetchQuote(activeMood);
+    }
   }, [activeMood]);
 
   const handleMoodSelect = (mood: string) => {
