@@ -245,8 +245,8 @@ export default function InspiraInk() {
         </div>
       </section>
 
-      <footer style={{ textAlign: 'center', padding: '2rem 0', color: 'var(--ink-text-muted)', fontSize: '0.9rem', borderTop: '1px solid var(--ink-tertiary)', marginTop: '2rem', fontFamily: 'var(--font-sans)' }}>
-        Built by the writer <strong style={{ color: 'var(--ink-text)' }}>Mohammed Irfaan Zayn</strong> with <Heart size={14} style={{ display: 'inline', color: 'var(--ink-highlight)', margin: '0 4px', position: 'relative', top: '2px' }}/> Love.
+      <footer>
+        Built by the writer <strong>Mohammed Irfaan Zayn</strong> with <Heart size={14} style={{ display: 'inline', color: 'var(--blue)', margin: '0 4px', position: 'relative', top: '2px' }}/> Love.
       </footer>
     </main>
   );
