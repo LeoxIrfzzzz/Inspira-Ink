@@ -115,13 +115,13 @@ export default function InspiraInk() {
         <form onSubmit={handleSearch} className="search-form">
           <input 
             type="number" 
-            placeholder="Search by quote number (e.g., 42)..." 
+            placeholder="Enter quote number..." 
             className="search-input"
             value={searchId}
             onChange={e => setSearchId(e.target.value)}
           />
           <button type="submit" className="search-btn" aria-label="Search">
-            <Search size={20} />
+            <Search size={18} /> <span className="btn-text">Search</span>
           </button>
         </form>
       </section>

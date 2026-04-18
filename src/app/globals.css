@@ -57,6 +57,19 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 2rem;
+  }
 }
 
 .subtitle {
@@ -78,6 +91,7 @@ html, body {
   overflow: hidden;
   width: 100%;
   max-width: 500px;
+  height: 45px;
 }
 
 .search-input {
@@ -98,10 +112,23 @@ html, body {
   background: var(--blue);
   color: black;
   border: none;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
   cursor: pointer;
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .btn-text {
+    display: none;
+  }
+  .search-btn {
+    padding: 0 1rem;
+  }
 }
 
 .mood-selector {
