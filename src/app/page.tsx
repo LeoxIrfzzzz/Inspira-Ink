@@ -105,7 +105,7 @@ export default function InspiraInk() {
       <header className="header">
         <a href="/" className="title-link">
           <h1 className="title">
-            <Feather size={40} /> Inspira Ink
+            <Feather size={40} /> Inspira Ink v2.0
           </h1>
         </a>
         <p className="subtitle">The World&apos;s Spot for Writers. Give us your lines.</p>
