@@ -227,6 +227,26 @@ export default function InspiraInk() {
             <Send size={20} /> Immortalize Quote
           </button>
         </form>
+
+        <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
+          <button 
+            className="share-btn-global" 
+            onClick={() => {
+              if (navigator.share) {
+                navigator.share({
+                  title: 'Inspira Ink',
+                  text: 'Step into the Inky Sanctuary—Explore thousands of quotes by Mohammed Irfaan Zayn and immortalize your own lines.',
+                  url: window.location.href
+                }).catch(() => {});
+              } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link copied to clipboard! Share the love. ♡');
+              }
+            }}
+          >
+            Share this page with love ♡ ✨
+          </button>
+        </div>
       </section>
       
       <section className="info-section">

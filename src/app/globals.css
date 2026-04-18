@@ -312,11 +312,27 @@ html, body {
   transform: translateY(-5px);
 }
 
-.info-card h3 {
-  margin-bottom: 1.25rem;
-  font-family: var(--font-serif);
-  color: var(--theme-blue);
-  text-shadow: 0 0 10px rgba(81, 112, 255, 0.4);
+.share-btn-global {
+  background: transparent;
+  color: #FFFFFF;
+  border: 1px solid var(--theme-blue);
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(81, 112, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.share-btn-global:hover {
+  background: rgba(81, 112, 255, 0.1);
+  box-shadow: 0 0 20px var(--theme-blue);
+  transform: scale(1.05);
+  border-color: white;
 }
 
 footer {
